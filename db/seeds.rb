@@ -7,6 +7,11 @@
 Review.delete_all
 Product.delete_all
 
+100.times do
+ Product.create!(name: Faker::GreekPhilosophers.name,
+                cost: Faker::Number.decimal(2),
+                country: Faker::Address.country)
+end
 
 
 #

@@ -6,6 +6,10 @@
 
 <% @products.each do |product| %>
 
-  <p><%=product.name%></p>
+<div class="container item_div">
+  <p><%=product.name%>
+  Cost ($) : <%=product.cost%>
+  From : <%=product.country%></p>
+</div>
 
 <% end %>
