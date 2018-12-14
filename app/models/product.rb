@@ -7,4 +7,8 @@ class Product < ActiveRecord::Base
     .limit(3)
     )}
 
+    scope :most_recent_all, -> {(
+      order(created_at: :desc)
+      )}
+
 end

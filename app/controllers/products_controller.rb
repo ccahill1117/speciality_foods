@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def index2
-    @products = Product.all
+    @products = Product.most_recent_all
     render :index2
   end
 
