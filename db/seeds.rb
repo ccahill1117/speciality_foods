@@ -7,10 +7,20 @@
 Review.delete_all
 Product.delete_all
 
-100.times do
+250.times do
  Product.create!(name: Faker::GreekPhilosophers.name,
                 cost: Faker::Number.decimal(2),
                 country: Faker::Address.country)
+end
+
+Product.all.each do |product|
+  5.times do
+    product.reviews.create!(author_name: Faker::Name.name,
+                            rating: rand(5)+1,
+                            review_text: Faker::Lorem.sentence
+                            )
+  end
+
 end
 
 

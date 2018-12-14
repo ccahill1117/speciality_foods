@@ -7,9 +7,13 @@
 <% @products.each do |product| %>
 
 <div class="container item_div">
-  <p><%=product.name%>
+  <%=product.name%>
   Cost ($) : <%=product.cost%>
-  From : <%=product.country%></p>
+  From : <%=product.country%>
+    <% product.reviews.each do |review| %>
+    <p><%= review.author_name %> <%= review.rating%></p>
+    <p>"<%= (review.review_text).to_s%>"</p>
+    <%end%>
 </div>
 
 <% end %>
