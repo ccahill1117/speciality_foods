@@ -3,14 +3,14 @@
 #
 # Examples:
 
-Product.destroy_all
 
 10.times do |index|
-  Product.create!(name: Faker::Dessert.variety)
+  Review.create!( author_name: Faker::Name.name,
+                  review_text: Faker::Dessert.topping)
 
 end
 
-p "created #{Product.count} desserts"
+p "created #{Review.count} desserts"
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
