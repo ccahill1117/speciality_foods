@@ -6,6 +6,11 @@ class ProductsController < ApplicationController
 
   end
 
+  def index2
+    @products = Product.all
+    render :index2
+  end
+
   def create
     @product = Product.new(product_params)
     @product.save
