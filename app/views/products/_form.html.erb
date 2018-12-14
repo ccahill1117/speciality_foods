@@ -2,7 +2,7 @@
   <%= form_for [@product] do |t| %>
     <div class="row enter_row">
       <div class="col-sm">
-        <%= t.label :name %>
+        <%= t.label "Product Name" %>
       </div>
       <div class="col-sm">
         <%= t.text_field :name %>
@@ -10,7 +10,7 @@
     </div>
     <div class="row enter_row">
       <div class="col-sm">
-        <%= t.label :cost %>
+        <%= t.label "Enter Cost in USD $" %>
       </div>
       <div class="col-sm">
         <%= t.text_field :cost %>
