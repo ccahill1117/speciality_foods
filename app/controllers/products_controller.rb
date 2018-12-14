@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @product = Product.new()
-    @products = Product.all()
+    @products = Product.most_recent
   end
 
   def create
