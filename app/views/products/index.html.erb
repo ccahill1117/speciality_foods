@@ -12,6 +12,7 @@
   From : <%=product.country%>
   <br>
     reviews : <%= product.reviews.length %>
+    <%= link_to product, product_path(product) %>
 </div>
 
 <% end %>

@@ -1,0 +1,10 @@
+<%= link_to "Return to Home Page", products_path %>
+
+<h3>Reviews:</h3>
+<% @reviews.each do |review| %>
+  <p><%= review.review_text %>
+    <ul>
+      <li> <%= review.author_name %></li>
+    </ul>
+  </p>
+<% end %>

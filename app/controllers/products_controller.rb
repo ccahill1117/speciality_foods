@@ -14,6 +14,12 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
+  def show
+    @product = Product.find(params[:id])
+    @reviews = @product.reviews
+  end
+
+
   private
   def product_params
     params.require(:product).permit(:name, :cost, :country)
