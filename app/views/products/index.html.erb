@@ -12,6 +12,7 @@
   From : <%=product.country%>
   <br>
     reviews : <%= product.reviews.length %>
+    average rating : <%= ((product.reviews.pluck(:rating).sum)/(product.reviews.length)).round(2) %>
     <%= link_to "Click here to see product details", product_path(product) %>
 </div>
 
