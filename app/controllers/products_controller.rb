@@ -14,14 +14,13 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.save
-
-
     redirect_to products_path
   end
 
   def show
     @product = Product.find(params[:id])
     @reviews = @product.reviews
+    @review = Review.new()
   end
 
 

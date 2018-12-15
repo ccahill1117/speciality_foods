@@ -1,0 +1,31 @@
+<div class="container" style="border-style: solid;">
+  <%= form_for [@product, @review] do |t| %>
+    <div class="row enter_row">
+      <div class="col-sm">
+        <%= t.label "Reviewer name" %>
+      </div>
+      <div class="col-sm">
+        <%= t.text_field :author_name %>
+      </div>
+    </div>
+    <div class="row enter_row">
+      <div class="col-sm">
+        <%= t.label "Enter rating 1-5" %>
+      </div>
+      <div class="col-sm">
+        <%= t.text_field :rating %>
+      </div>
+    </div>
+    <div class="row enter_row">
+      <div class="col-sm">
+        <%= t.label "Enter review here" %>
+      </div>
+      <div class="col-sm">
+        <%= t.text_field :review_text %>
+      </div>
+    </div>
+    <div class="row enter_row">
+        <%= t.submit %>
+    </div>
+  <% end %>
+</div>
