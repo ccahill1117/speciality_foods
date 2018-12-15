@@ -1,14 +1,14 @@
 class ReviewsController < ApplicationController
 
-  def show
+  def create
     @product = Product.find(params[:product_id])
-    @review = Review.new(review_params)
+    @review = @product.reviews.new(review_params)
     @review.save
 
     redirect_to product_path(@product)
   end
 
-  def create
+  def show
     @review = Review.find(params[:id])
     @product = @review.product
 
